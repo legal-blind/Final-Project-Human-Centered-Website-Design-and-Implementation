@@ -1,4 +1,3 @@
-
 /* styles.css - Travel Inspiration Guide */
 :root{
   --accent:#2b7a78;
@@ -56,9 +55,27 @@ nav.primary a.active{background:var(--accent);color:white}
 }
 .dest-card:hover{transform:translateY(-6px);box-shadow:0 8px 24px rgba(20,20,40,0.06)}
 .dest-thumb{
-  height:140px;border-radius:10px;background:#ddd;display:flex;align-items:center;justify-content:center;font-weight:600;color:#666;margin-bottom:10px;
+  height:140px;
+  border-radius:10px;
+  background:#ddd;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight:600;
+  color:#666;
+  margin-bottom:10px;
   position:relative;
+  overflow:hidden; /* added to ensure image does not bleed out */
 }
+
+/* ✅ Added Option A: Make images fill the thumbnail area perfectly */
+.dest-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Fill + crop = clean uniform layout */
+  display: block;
+}
+
 .preview{
   position:absolute;right:12px;top:12px;padding:8px 10px;background:rgba(0,0,0,0.6);color:white;border-radius:8px;font-size:13px;opacity:0;transform:translateY(6px);transition:all .18s;
 }
