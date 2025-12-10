@@ -1,0 +1,1 @@
+Replace placeholders in /images with your photos. Submit the folder zipped as your Development.zip for Canvas.
