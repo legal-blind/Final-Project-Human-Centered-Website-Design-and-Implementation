@@ -1,117 +1,49 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Travel Inspiration Guide - Home</title>
-  <link rel="stylesheet" href="css/styles.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Travel Inspiration Guide</title>
 </head>
-<body data-page="home">
-  <header class="site-header">
-    <div class="header-inner">
-      <div class="brand">Travel Inspiration Guide</div>
-      <nav class="primary" aria-label="Main navigation">
-        <a href="index.html" data-page="home">Home</a>
-        <a href="about.html" data-page="about">About</a>
-        <a href="services.html" data-page="services">Itineraries</a>
-        <a href="gallery.html" data-page="gallery">Gallery</a>
-        <a href="contact.html" data-page="contact">Contact</a>
-        <a href="faq.html" data-page="faq">FAQ</a>
-      </nav>
-    </div>
+<body>
+
+  <header>
+    <h1>Travel Inspiration Guide</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Itineraries</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact</a>
+      <a href="faq.html">FAQ</a>
+    </nav>
   </header>
 
-  <main class="container">
-    
-<section class="hero">
-  <div class="hero-left">
-    <h1>Find your next trip in minutes</h1>
-    <p class="meta">Short itineraries, curated destinations, and clear tips that help you book faster.</p>
-    <div style="margin-top:14px">
-      <a class="hero-cta" href="gallery.html">Browse Destinations</a>
-      <a class="meta" style="margin-left:14px" href="contact.html">Ask for custom plans</a>
-    </div>
+  <section class="hero">
+    <h2>Your next adventure starts here</h2>
+    <p>Explore destinations, itineraries, and travel tips.</p>
+  </section>
 
-    <div class="topics" style="margin-top:18px">
-      <div class="pulse">Weekend trips</div>
-      <div class="pulse">Budget travel</div>
-      <div class="pulse">City breaks</div>
-      <div class="pulse">Outdoor adventures</div>
-    </div>
-  </div>
-
-  <div class="hero-right">
-    <div style="text-align:center">
-      <div style="font-weight:700">Travel simpler. Travel smarter.</div>
-      <div class="meta" style="margin-top:6px">Replace this area with a hero image of your choice.</div>
-    </div>
-  </div>
-</section>
-
-<section style="margin-top:18px">
-  <h2>Popular picks</h2>
-  <div class="card-grid">
-    <a class="dest-card" href="gallery.html#kyoto">
-      <div class="dest-thumb">Kyoto (placeholder)</div>
-      <div class="preview">Temples & gardens</div>
-      <div><strong>Kyoto, Japan</strong></div>
-      <div class="meta">3-5 day cultural itinerary</div>
-    </a>
-
-    <a class="dest-card" href="gallery.html#santorini">
-      <div class="dest-thumb">Santorini (placeholder)</div>
-      <div class="preview">Sunset viewpoints</div>
-      <div><strong>Santorini, Greece</strong></div>
-      <div class="meta">Relaxed 4-day plan</div>
-    </a>
-
-    <a class="dest-card" href="gallery.html#reykjavik">
-      <div class="dest-thumb">Reykjavik (placeholder)</div>
-      <div class="preview">Outdoor routes</div>
-      <div><strong>Reykjavik, Iceland</strong></div>
-      <div class="meta">Nature and day trips</div>
-    </a>
-
-    <a class="dest-card" href="gallery.html#lisbon">
-      <div class="dest-thumb">Lisbon (placeholder)</div>
-      <div class="preview">Walkable streets</div>
-      <div><strong>Lisbon, Portugal</strong></div>
-      <div class="meta">Eat and walk itinerary</div>
-    </a>
-
-    <a class="dest-card" href="gallery.html#seoul">
-      <div class="dest-thumb">Seoul (placeholder)</div>
-      <div class="preview">Nightlife & markets</div>
-      <div><strong>Seoul, South Korea</strong></div>
-      <div class="meta">Culture and food</div>
-    </a>
-
-    <a class="dest-card" href="gallery.html#vancouver">
-      <div class="dest-thumb">Vancouver (placeholder)</div>
-      <div class="preview">Trails & waterfront</div>
-      <div><strong>Vancouver, Canada</strong></div>
-      <div class="meta">Outdoor city balance</div>
-    </a>
-  </div>
-</section>
-
-  </main>
-
-  <footer class="footer">
-    <div class="container" style="display:flex;flex-direction:column;gap:8px">
-      <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap">
-        <div class="small">© 2025 Travel Inspiration Guide</div>
-        <nav class="footer-nav">
-          <a href="index.html" data-page="home">Home</a>
-          <a href="gallery.html" data-page="gallery">Destinations</a>
-          <a href="contact.html" data-page="contact">Contact</a>
-          <a href="faq.html" data-page="faq">FAQ</a>
-        </nav>
+  <section class="featured">
+    <h3>Featured Destinations</h3>
+    <div class="dest-grid">
+      <div class="dest-card">
+        <img src="images/kyoto.jpg" alt="Kyoto">
+        <h4>Kyoto</h4>
       </div>
-      <div class="small">Built for a human-centered web design project. Replace images in /images with your photos.</div>
-    </div>
-  </footer>
 
-  <script src="js/script.js"></script>
+      <div class="dest-card">
+        <img src="images/santorini.jpg" alt="Santorini">
+        <h4>Santorini</h4>
+      </div>
+
+      <div class="dest-card">
+        <img src="images/reykjavik.jpg" alt="Reykjavik">
+        <h4>Reykjavik</h4>
+      </div>
+    </div>
+  </section>
+
 </body>
 </html>
