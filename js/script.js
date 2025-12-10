@@ -1,62 +1,50 @@
 
-// script.js - interactions: nav active, form validation, faq accordion, contact fake submit
-document.addEventListener('DOMContentLoaded', function(){
-  // highlight active nav link based on body data-page
-  const page = document.body.dataset.page;
-  if(page){
-    const a = document.querySelector('nav.primary a[data-page="'+page+'"]');
-    if(a) a.classList.add('active');
-    const f = document.querySelector('footer nav a[data-page="'+page+'"]');
-    if(f) f.classList.add('active');
-  }
+// Toggle mobile menu
+const menuButton = document.querySelector("#menu-button");
+const menu = document.querySelector("#menu");
 
-  // FAQ accordion
-  document.querySelectorAll('.accordion .q').forEach(q=>{
-    q.addEventListener('click', ()=>{
-      const acc = q.closest('.accordion');
-      acc.classList.toggle('open');
+if (menuButton && menu) {
+    menuButton.addEventListener("click", () => {
+        const open = menu.classList.contains("open");
+        if (open) {
+            menu.classList.remove("open");
+        } else {
+            menu.classList.add("open");
+        }
     });
-  });
+}
 
-  // Contact form simple validation and fake submit toast
-  const form = document.getElementById('contact-form');
-  if(form){
-    form.addEventListener('submit', function(e){
-      e.preventDefault();
-      const name = form.querySelector('[name=name]').value.trim();
-      const email = form.querySelector('[name=email]').value.trim();
-      const message = form.querySelector('[name=message]').value.trim();
-      if(!name || !email || !message){
-        alert('Please fill out all fields before submitting.');
-        return;
-      }
-      // lightweight email format check
-      if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){
-        alert('Enter a valid email address.');
-        return;
-      }
-      // fake submit - show confirmation and clear form
-      const btn = form.querySelector('button[type=submit]');
-      btn.disabled = true;
-      btn.textContent = 'Sending...';
-      setTimeout(()=>{
-        btn.disabled = false;
-        btn.textContent = 'Send Message';
-        alert('Thanks! Your message was sent. We will reply with personalized trip suggestions within 48 hours.');
-        form.reset();
-      }, 900);
-    });
-  }
+// Simple gallery viewer
+const galleryImages = document.querySelectorAll(".gallery-img");
+const viewer = document.querySelector("#viewer");
+const viewerImg = document.querySelector("#viewer-img");
+const viewerClose = document.querySelector("#viewer-close");
 
-  // Gallery hover previews: show small tooltip from data-preview
-  document.querySelectorAll('.dest-card').forEach(card=>{
-    card.addEventListener('mouseenter', ()=>{
-      const p = card.querySelector('.preview');
-      if(p) p.style.opacity = '1';
+if (galleryImages.length && viewer && viewerImg && viewerClose) {
+    galleryImages.forEach(img => {
+        img.addEventListener("click", () => {
+            viewerImg.src = img.src;
+            viewer.classList.add("show");
+        });
     });
-    card.addEventListener('mouseleave', ()=>{
-      const p = card.querySelector('.preview');
-      if(p) p.style.opacity = '0';
+
+    viewerClose.addEventListener("click", () => {
+        viewer.classList.remove("show");
     });
-  });
-});
+}
+
+// Simple form validation for contact page
+const contactForm = document.querySelector("#contact-form");
+
+if (contactForm) {
+    contactForm.addEventListener("submit", e => {
+        const name = document.querySelector("#name");
+        const email = document.querySelector("#email");
+        const message = document.querySelector("#message");
+
+        if (!name.value || !email.value || !message.value) {
+            e.preventDefault();
+            alert("Fill out all fields.");
+        }
+    });
+}
